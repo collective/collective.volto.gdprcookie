@@ -12,14 +12,16 @@
     Better import explicit packages or configurations ;)
   -->
   <!--<includeDependencies package="." />-->
+  <include file="permissions.zcml" />
 
   <include package=".browser" />
+  <include package=".restapi" />
 
-  <include file="permissions.zcml" />
+
 
   <genericsetup:registerProfile
       name="default"
-      title="collective.volto.gdprcookie"
+      title="Volto: GDPR Cookies management"
       directory="profiles/default"
       description="Installs the collective.volto.gdprcookie add-on."
       provides="Products.GenericSetup.interfaces.EXTENSION"
@@ -28,7 +30,7 @@
 
   <genericsetup:registerProfile
       name="uninstall"
-      title="collective.volto.gdprcookie (uninstall)"
+      title="Volto: GDPR Cookies management (uninstall)"
       directory="profiles/uninstall"
       description="Uninstalls the collective.volto.gdprcookie add-on."
       provides="Products.GenericSetup.interfaces.EXTENSION"
