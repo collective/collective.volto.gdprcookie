@@ -16,9 +16,11 @@ logger = logging.getLogger(__name__)
 class GDPRCookieSettingsSerializeToJson(ControlpanelSerializeToJson):
     def __call__(self):
         json_data = super().__call__()
-        settings = json_data["data"].get("settings", "{}")
+        gdpr_cookie_settings = json_data["data"].get("gdpr_cookie_settings", "{}")
         try:
-            json_data["data"]["settings"] = json.loads(settings)
+            json_data["data"]["gdpr_cookie_settings"] = json.loads(gdpr_cookie_settings)
         except json.decoder.JSONDecodeError:
-            logger.error(f"Unable to convert value into json object: {settings}")
+            logger.error(
+                f"Unable to convert value into json object: {gdpr_cookie_settings}"
+            )
         return json_data

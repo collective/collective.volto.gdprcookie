@@ -20,22 +20,22 @@ class GDPRCookieSettingsDeserializeFromJson(ControlpanelDeserializeFromJson):
         proxy = self.registry.forInterface(self.schema, prefix=self.schema_prefix)
         errors = []
 
-        settings = req.get("settings", {})
-        if not settings:
+        gdpr_cookie_settings = req.get("gdpr_cookie_settings", {})
+        if not gdpr_cookie_settings:
             errors.append(
                 {
                     "message": "Missing data",
-                    "field": "settings",
+                    "field": "gdpr_cookie_settings",
                 }
             )
             raise BadRequest(errors)
         try:
-            setattr(proxy, "settings", json.dumps(settings))
+            setattr(proxy, "gdpr_cookie_settings", json.dumps(gdpr_cookie_settings))
         except ValueError as e:
             errors.append(
                 {
                     "message": str(e),
-                    "field": "settings",
+                    "field": "gdpr_cookie_settings",
                     "error": e,
                 }
             )

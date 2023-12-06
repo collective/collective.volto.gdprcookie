@@ -26,14 +26,16 @@ class GDPRCookieSettingsGet(Service):
             return {}
         show_icon = self.get_field_value(field="show_icon")
         technical_cookies_only = self.get_field_value(field="technical_cookies_only")
-        settings = self.get_field_value(field="settings")
-        if settings:
-            settings = json.loads(settings)
+        gdpr_cookie_settings = self.get_field_value(field="gdpr_cookie_settings")
+        if gdpr_cookie_settings:
+            gdpr_cookie_settings = json.loads(gdpr_cookie_settings)
 
         data = {
             "show_icon": show_icon,
+            "cookie_version": self.get_field_value(field="cookie_version"),
+            "cookie_expires": self.get_field_value(field="cookie_expires"),
         }
-        if technical_cookies_only and "profiling" in settings:
-            del settings["profiling"]
-        data.update(settings)
+        if technical_cookies_only and "profiling" in gdpr_cookie_settings:
+            del gdpr_cookie_settings["profiling"]
+        data.update(gdpr_cookie_settings)
         return data
