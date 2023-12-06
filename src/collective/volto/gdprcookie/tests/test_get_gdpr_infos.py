@@ -45,7 +45,11 @@ class GDPRCookieInfosTest(unittest.TestCase):
     def test_return_default_infos_if_not_customized(self):
         response = self.api_session.get("/@gdpr-cookie-infos")
         results = response.json()
-        expected = {"show_icon": True}
+        expected = {
+            "show_icon": True,
+            "cookie_version": "v1",
+            "cookie_expires": 180,
+        }
         expected.update(DEFAULT_SETTINGS)
         self.assertEqual(results, expected)
 
@@ -61,7 +65,11 @@ class GDPRCookieInfosTest(unittest.TestCase):
     def test_return_only_technical_cookies_if_set(self):
         response = self.api_session.get("/@gdpr-cookie-infos")
         results = response.json()
-        expected = {"show_icon": True}
+        expected = {
+            "show_icon": True,
+            "cookie_version": "v1",
+            "cookie_expires": 180,
+        }
         expected.update(DEFAULT_SETTINGS)
         self.assertEqual(results, expected)
 
@@ -72,7 +80,11 @@ class GDPRCookieInfosTest(unittest.TestCase):
 
         response = self.api_session.get("/@gdpr-cookie-infos")
         results = response.json()
-        expected = {"show_icon": True}
+        expected = {
+            "show_icon": True,
+            "cookie_version": "v1",
+            "cookie_expires": 180,
+        }
         expected.update(DEFAULT_SETTINGS)
         del expected["profiling"]
 
