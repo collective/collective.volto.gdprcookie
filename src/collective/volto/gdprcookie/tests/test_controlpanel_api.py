@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from collective.volto.gdprcookie.interfaces import IGDPRCookieSettings
-from collective.volto.gdprcookie.testing import VOLTO_GDPR_COOKIE_API_FUNCTIONAL_TESTING
+from collective.volto.gdprcookie.testing import RESTAPI_TESTING
 from plone import api
 from plone.app.testing import setRoles
 from plone.app.testing import SITE_OWNER_NAME
@@ -14,7 +14,7 @@ import unittest
 
 
 class GDPRCookieControlpanelTest(unittest.TestCase):
-    layer = VOLTO_GDPR_COOKIE_API_FUNCTIONAL_TESTING
+    layer = RESTAPI_TESTING
 
     def setUp(self):
         self.app = self.layer["app"]
