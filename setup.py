@@ -57,14 +57,18 @@ setup(
     ],
     extras_require={
         "test": [
+            "gocept.pytestlayer",
             "plone.app.testing",
-            # Plone KGS does not use this version, because it would break
-            # Remove if your package shall be part of coredev.
-            # plone_coredev tests as of 2016-04-01.
-            "plone.testing>=5.0.0",
-            "plone.app.contenttypes",
-            "plone.app.robotframework[debug]",
-            "collective.MockMailHost",
+            "plone.restapi[test]",
+            "pytest-cov",
+            "pytest-plone>=0.2.0",
+            "pytest-docker",
+            "pytest-mock",
+            "pytest",
+            "zest.releaser[recommended]",
+            "zestreleaser.towncrier",
+            "pytest-mock",
+            "requests-mock",
         ],
     },
     entry_points="""
