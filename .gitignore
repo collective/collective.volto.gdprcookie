@@ -9,6 +9,7 @@
 .*project
 # dirs
 /.settings/
+src/collective/volto/gdprcookie/locales/__pycache__/
 bin/
 buildout-cache/
 develop-eggs/

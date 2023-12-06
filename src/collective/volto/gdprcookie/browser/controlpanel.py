@@ -6,7 +6,7 @@ from collective.volto.gdprcookie import _
 
 class GDPRCookieForm(controlpanel.RegistryEditForm):
     schema = IGDPRCookieSettings
-    label = _("gdpr_cookie_settings_label", default="GDPR Cookie Settings")
+    label = _("gdpr_cookie_settings_controlpanel_label", default="GDPR Cookie Settings")
 
 
 class GDPRCookieControlPanel(controlpanel.ControlPanelFormWrapper):
