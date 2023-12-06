@@ -4,15 +4,12 @@ from plone.restapi.deserializer import json_body
 from plone.restapi.deserializer.controlpanels import (
     ControlpanelDeserializeFromJson,
 )
-from plone.restapi.deserializer.blocks import path2uid
 from plone.restapi.interfaces import IDeserializeFromJson
-from Products.CMFPlone.utils import safe_unicode
 from zExceptions import BadRequest
 from zope.component import adapter
 from zope.interface import implementer
 
 import json
-import lxml
 
 
 @implementer(IDeserializeFromJson)
