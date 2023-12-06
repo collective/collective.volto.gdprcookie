@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from collective.volto.gdprcookie.interfaces import ICollectiveVoltoGdprcookieLayer
 from collective.volto.gdprcookie.interfaces import IGDPRCookieSettings
 from plone.restapi.controlpanels import RegistryConfigletPanel

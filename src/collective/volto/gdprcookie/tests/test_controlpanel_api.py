@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from collective.volto.gdprcookie.interfaces import IGDPRCookieSettings
 from collective.volto.gdprcookie.testing import RESTAPI_TESTING
 from plone import api

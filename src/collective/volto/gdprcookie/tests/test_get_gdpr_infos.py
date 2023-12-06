@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
+from collective.volto.gdprcookie.config import DEFAULT_SETTINGS
 from collective.volto.gdprcookie.interfaces import IGDPRCookieSettings
 from collective.volto.gdprcookie.testing import RESTAPI_TESTING
-from collective.volto.gdprcookie.config import DEFAULT_SETTINGS
 from plone import api
 from plone.app.testing import setRoles
 from plone.app.testing import SITE_OWNER_NAME
@@ -10,7 +9,6 @@ from plone.app.testing import TEST_USER_ID
 from plone.restapi.testing import RelativeSession
 from transaction import commit
 
-import json
 import unittest
 
 
