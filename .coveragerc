@@ -1,6 +1,6 @@
 [report]
 include =
-    src/collective.volto/*
+    src/collective/volto/gdprcookie/*
 omit =
     */test*
     */upgrades/*

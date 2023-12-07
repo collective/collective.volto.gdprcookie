@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
-from plone.app.registry.browser import controlpanel
-from collective.volto.gdprcookie.interfaces import IGDPRCookieSettings
 from collective.volto.gdprcookie import _
+from collective.volto.gdprcookie.interfaces import IGDPRCookieSettings
+from plone.app.registry.browser import controlpanel
 
 
 class GDPRCookieForm(controlpanel.RegistryEditForm):

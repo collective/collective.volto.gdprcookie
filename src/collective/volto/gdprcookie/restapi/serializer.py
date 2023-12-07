@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from collective.volto.gdprcookie.interfaces import IGDPRCookieSettings
 from plone.restapi.interfaces import ISerializeToJson
 from plone.restapi.serializer.controlpanels import ControlpanelSerializeToJson
@@ -7,6 +6,7 @@ from zope.interface import implementer
 
 import json
 import logging
+
 
 logger = logging.getLogger(__name__)
 

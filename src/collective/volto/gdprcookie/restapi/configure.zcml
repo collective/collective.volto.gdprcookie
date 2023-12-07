@@ -1,28 +1,30 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:plone="http://namespaces.plone.org/plone"
-    xmlns:zcml="http://namespaces.zope.org/zcml">
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    >
 
   <include package="plone.restapi" />
-    
+
   <!-- enable controlpanel on plone.restapi -->
   <adapter
       factory=".controlpanel.GDPRCookieSettingsControlpanel"
-      name="gdpr-cookie-settings" />
+      name="gdpr-cookie-settings"
+      />
 
   <!-- route to retrieve cookie settings from Volto also from anonymous users -->
   <plone:service
-    method="GET"
-    name="@gdpr-cookie-infos"
-    for="Products.CMFCore.interfaces.ISiteRoot"
-    factory=".get.GDPRCookieSettingsGet"
-    permission="zope2.View"
-    />
+      method="GET"
+      factory=".get.GDPRCookieSettingsGet"
+      for="Products.CMFCore.interfaces.ISiteRoot"
+      permission="zope2.View"
+      name="@gdpr-cookie-infos"
+      />
 
 
   <!-- deserializer -->
   <adapter factory=".deserializer.GDPRCookieSettingsDeserializeFromJson" />
   <!-- serializer -->
   <adapter factory=".serializer.GDPRCookieSettingsSerializeToJson" />
-  
+
 </configure>

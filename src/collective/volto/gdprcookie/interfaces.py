@@ -1,9 +1,11 @@
-# -*- coding: utf-8 -*-
 from collective.volto.gdprcookie import _
 from collective.volto.gdprcookie.config import DEFAULT_SETTINGS
-from zope.publisher.interfaces.browser import IDefaultBrowserLayer
-from zope.schema import SourceText, Bool, Int, TextLine
 from zope.interface import Interface
+from zope.publisher.interfaces.browser import IDefaultBrowserLayer
+from zope.schema import Bool
+from zope.schema import Int
+from zope.schema import SourceText
+from zope.schema import TextLine
 
 import json
 

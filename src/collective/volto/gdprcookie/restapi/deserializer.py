@@ -1,9 +1,6 @@
-# -*- coding: utf-8 -*-
 from collective.volto.gdprcookie.interfaces import IGDPRCookieSettings
 from plone.restapi.deserializer import json_body
-from plone.restapi.deserializer.controlpanels import (
-    ControlpanelDeserializeFromJson,
-)
+from plone.restapi.deserializer.controlpanels import ControlpanelDeserializeFromJson
 from plone.restapi.interfaces import IDeserializeFromJson
 from zExceptions import BadRequest
 from zope.component import adapter
