@@ -1,14 +1,33 @@
 from collective.volto.gdprcookie.interfaces import IGDPRCookieSettings
 from plone import api
+from plone.restapi.interfaces import IExpandableElement
 from plone.restapi.services import Service
+from zope.component import adapter
 from zope.interface import implementer
-from zope.publisher.interfaces import IPublishTraverse
+from zope.interface import Interface
 
 import json
 
 
-@implementer(IPublishTraverse)
-class GDPRCookieSettingsGet(Service):
+@implementer(IExpandableElement)
+@adapter(Interface, Interface)
+class GDPRCookieSettings:
+    def __init__(self, context, request):
+        self.context = context
+        self.request = request
+
+    def __call__(self, expand=False):
+        result = {
+            "gdpr-cookie-settings": {
+                "@id": f"{self.context.absolute_url()}/@gdpr-cookie-settings"
+            }
+        }
+        if not expand:
+            return result
+
+        result["gdpr-cookie-settings"] = self.get_data()
+        return result
+
     def get_field_value(self, field):
         """
         Return value from registry
@@ -17,7 +36,7 @@ class GDPRCookieSettingsGet(Service):
             api.portal.get_registry_record(field, interface=IGDPRCookieSettings) or None
         )
 
-    def reply(self):
+    def get_data(self):
         """
         Return settings
         """
@@ -39,3 +58,9 @@ class GDPRCookieSettingsGet(Service):
             del gdpr_cookie_settings["profiling"]
         data.update(gdpr_cookie_settings)
         return data
+
+
+class GDPRCookieSettingsGet(Service):
+    def reply(self):
+        data = GDPRCookieSettings(self.context, self.request)
+        return data(expand=True)["gdpr-cookie-settings"]

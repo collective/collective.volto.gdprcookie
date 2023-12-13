@@ -2,6 +2,7 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:zcml="http://namespaces.zope.org/zcml"
+    xmlns:cache="http://namespaces.zope.org/cache"
     >
 
   <include package="plone.restapi" />
@@ -20,7 +21,11 @@
       permission="zope2.View"
       name="@gdpr-cookie-infos"
       />
+  <cache:ruleset ruleset="plone.content.dynamic" for=".get.GDPRCookieSettingsGet" />
 
+  <!-- expander -->
+  <adapter factory=".get.GDPRCookieSettings" name="gdpr-cookie-settings"/>
+  
 
   <!-- deserializer -->
   <adapter factory=".deserializer.GDPRCookieSettingsDeserializeFromJson" />
