@@ -43,7 +43,7 @@ Features
 - Restapi endpoint that exposes these settings for Volto.
 
 @gdpr-cookie-settings
-------------------
+---------------------
 
 Anonymous users can't access registry resources by default with plone.restapi (there is a special permission).
 
