@@ -42,14 +42,14 @@ Features
 - Control panel in plone registry to manage GDPR cookie settings.
 - Restapi endpoint that exposes these settings for Volto.
 
-@gdpr-cookie-infos
+@gdpr-cookie-settings
 ------------------
 
 Anonymous users can't access registry resources by default with plone.restapi (there is a special permission).
 
-To avoid enabling registry access to everyone, this package exposes a dedicated restapi route with GDPR cookie settings: *@gdpr-cookie-infos*::
+To avoid enabling registry access to everyone, this package exposes a dedicated restapi route with GDPR cookie settings: *@gdpr-cookie-settings*::
 
-    > curl -i http://localhost:8080/Plone/@gdpr-cookie-infos -H 'Accept: application/json' --user admin:admin
+    > curl -i http://localhost:8080/Plone/@gdpr-cookie-settings -H 'Accept: application/json' --user admin:admin
 
 
 Volto integration

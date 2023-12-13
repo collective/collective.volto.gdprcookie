@@ -12,7 +12,7 @@ from transaction import commit
 import unittest
 
 
-class GDPRCookieInfosTest(unittest.TestCase):
+class GDPRCookieSettingsTest(unittest.TestCase):
     layer = RESTAPI_TESTING
 
     def setUp(self):
@@ -32,7 +32,7 @@ class GDPRCookieInfosTest(unittest.TestCase):
         commit()
 
     def test_route_exists(self):
-        response = self.api_session.get("/@gdpr-cookie-infos")
+        response = self.api_session.get("/@gdpr-cookie-settings")
 
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.headers.get("Content-Type"), "application/json")
@@ -40,8 +40,8 @@ class GDPRCookieInfosTest(unittest.TestCase):
     def tearDown(self):
         self.api_session.close()
 
-    def test_return_default_infos_if_not_customized(self):
-        response = self.api_session.get("/@gdpr-cookie-infos")
+    def test_return_default_settings_if_not_customized(self):
+        response = self.api_session.get("/@gdpr-cookie-settings")
         results = response.json()
         expected = {
             "show_icon": True,
@@ -56,12 +56,12 @@ class GDPRCookieInfosTest(unittest.TestCase):
             "banner_enabled", False, interface=IGDPRCookieSettings
         )
         commit()
-        response = self.api_session.get("/@gdpr-cookie-infos")
+        response = self.api_session.get("/@gdpr-cookie-settings")
         results = response.json()
         self.assertEqual(results, {})
 
     def test_return_only_technical_cookies_if_set(self):
-        response = self.api_session.get("/@gdpr-cookie-infos")
+        response = self.api_session.get("/@gdpr-cookie-settings")
         results = response.json()
         expected = {
             "show_icon": True,
@@ -76,7 +76,7 @@ class GDPRCookieInfosTest(unittest.TestCase):
         )
         commit()
 
-        response = self.api_session.get("/@gdpr-cookie-infos")
+        response = self.api_session.get("/@gdpr-cookie-settings")
         results = response.json()
         expected = {
             "show_icon": True,

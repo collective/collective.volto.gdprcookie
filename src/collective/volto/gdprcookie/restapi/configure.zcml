@@ -19,7 +19,7 @@
       factory=".get.GDPRCookieSettingsGet"
       for="Products.CMFCore.interfaces.ISiteRoot"
       permission="zope2.View"
-      name="@gdpr-cookie-infos"
+      name="@gdpr-cookie-settings"
       />
   <cache:ruleset ruleset="plone.content.dynamic" for=".get.GDPRCookieSettingsGet" />
 
