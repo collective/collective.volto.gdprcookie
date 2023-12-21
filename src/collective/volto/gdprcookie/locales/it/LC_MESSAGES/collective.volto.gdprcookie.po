@@ -60,7 +60,7 @@ msgstr "Durata preferenze utente"
 #. Default: "Set the version number for the technical cookie that will store user preferences. Changing this value will invalidate previous user preferences and force them to re-accept them."
 #: collective/volto/gdprcookie/interfaces.py:36
 msgid "cookie_version_help"
-msgstr "Identificativo della versione delle impostazioni dei attuali. Quando l'utente accetta/rifiuta i cookie, viene anche salvato un cookie tecnico con questo valore. Cambiandolo, vengono invalidate le preferenze precedenti e l'utente torna a vedere il banner per accettare i cookie. E' utile cambiare questo valore quando si apportano modifiche significative alle impostazioni, e si vuole forzare l'utente ad accettare le condizioni aggiornate."
+msgstr "Identificativo della versione delle impostazioni dei cookie attuali. Quando l'utente accetta/rifiuta i cookie, viene anche salvato un cookie tecnico con questo valore. Cambiandolo, vengono invalidate le preferenze precedenti e l'utente torna a vedere il banner per accettare i cookie. E' utile cambiare questo valore quando si apportano modifiche significative alle impostazioni, e si vuole forzare l'utente ad accettare le condizioni aggiornate. Il codice scelto deve essere diverso dai precedenti. Si consiglia un codice contenente un numero incrementale."
 
 #. Default: "Cookie version"
 #: collective/volto/gdprcookie/interfaces.py:35
