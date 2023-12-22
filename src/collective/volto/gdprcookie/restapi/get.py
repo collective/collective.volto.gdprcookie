@@ -32,9 +32,14 @@ class GDPRCookieSettings:
         """
         Return value from registry
         """
-        return (
-            api.portal.get_registry_record(field, interface=IGDPRCookieSettings) or None
-        )
+        try:
+            return (
+                api.portal.get_registry_record(field, interface=IGDPRCookieSettings)
+                or None
+            )
+        except KeyError:
+            # product not installed
+            return None
 
     def get_data(self):
         """
