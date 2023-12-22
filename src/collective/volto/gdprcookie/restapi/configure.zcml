@@ -20,6 +20,7 @@
       for="Products.CMFCore.interfaces.ISiteRoot"
       permission="zope2.View"
       name="@gdpr-cookie-settings"
+      layer="collective.volto.gdprcookie.interfaces.ICollectiveVoltoGdprcookieLayer"
       />
   <cache:ruleset ruleset="plone.content.dynamic" for=".get.GDPRCookieSettingsGet" />
 
