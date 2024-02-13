@@ -1,8 +1,8 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
+    xmlns:cache="http://namespaces.zope.org/cache"
     xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:zcml="http://namespaces.zope.org/zcml"
-    xmlns:cache="http://namespaces.zope.org/cache"
     >
 
   <include package="plone.restapi" />
@@ -19,14 +19,20 @@
       factory=".get.GDPRCookieSettingsGet"
       for="Products.CMFCore.interfaces.ISiteRoot"
       permission="zope2.View"
-      name="@gdpr-cookie-settings"
       layer="collective.volto.gdprcookie.interfaces.ICollectiveVoltoGdprcookieLayer"
+      name="@gdpr-cookie-settings"
       />
-  <cache:ruleset ruleset="plone.content.dynamic" for=".get.GDPRCookieSettingsGet" />
+  <cache:ruleset
+      for=".get.GDPRCookieSettingsGet"
+      ruleset="plone.content.dynamic"
+      />
 
   <!-- expander -->
-  <adapter factory=".get.GDPRCookieSettings" name="gdpr-cookie-settings"/>
-  
+  <adapter
+      factory=".get.GDPRCookieSettings"
+      name="gdpr-cookie-settings"
+      />
+
 
   <!-- deserializer -->
   <adapter factory=".deserializer.GDPRCookieSettingsDeserializeFromJson" />

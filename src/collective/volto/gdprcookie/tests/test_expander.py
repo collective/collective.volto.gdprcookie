@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from collective.volto.gdprcookie.config import DEFAULT_SETTINGS
 from collective.volto.gdprcookie.testing import RESTAPI_TESTING
 from plone.app.testing import setRoles
