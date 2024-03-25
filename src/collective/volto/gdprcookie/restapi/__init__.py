@@ -1,4 +1,5 @@
 from plone.restapi.blocks import iter_block_transform_handlers
+from plone.restapi.serializer.converters import json_compatible
 
 import json
 
@@ -13,9 +14,9 @@ def parse_gdpr_blocks(context, data, transformer_interface):
 
     # fix intenal links
     for text in data["text"].values():
-        text["description"] = fix_text(
+        text = fix_text(
             context=context,
-            value=text["description"],
+            value=text,
             transformer_interface=transformer_interface,
         )
     for type_label in ["technical", "profiling"]:
@@ -23,29 +24,31 @@ def parse_gdpr_blocks(context, data, transformer_interface):
         if not cookie_type:
             continue
         for text in cookie_type["text"].values():
-            text["description"] = fix_text(
+            text = fix_text(
                 context=context,
-                value=text["description"],
+                value=text,
                 transformer_interface=transformer_interface,
             )
         for choice in cookie_type.get("choices", []):
             for text in choice.get("text", {}).values():
-                text["description"] = fix_text(
+                text = fix_text(
                     context=context,
-                    value=text["description"],
+                    value=text,
                     transformer_interface=transformer_interface,
                 )
-    return json.dumps(data)
+    return json.dumps(json_compatible(data))
 
 
 def fix_text(context, value, transformer_interface):
     """
     Create a fake block to be able to apply all handlers
     """
-    fake_block = {"@type": "slate", "value": value}
-    for handler in iter_block_transform_handlers(
-        context, fake_block, transformer_interface
-    ):
-        fake_block = handler(fake_block)
+    if value.get("description", {}):
+        fake_block = {"@type": "slate", "value": value["description"]}
+        for handler in iter_block_transform_handlers(
+            context, fake_block, transformer_interface
+        ):
+            fake_block = handler(fake_block)
 
-    return fake_block["value"]
+        value["description"] = fake_block["value"]
+    return value

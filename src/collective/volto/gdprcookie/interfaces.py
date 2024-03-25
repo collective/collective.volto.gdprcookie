@@ -59,6 +59,7 @@ class IGDPRCookieSettings(Interface):
             default="Select this to enable only the technical cookies part of the banner.",
         ),
         default=False,
+        required=False,
     )
 
     gdpr_cookie_settings = SourceText(
