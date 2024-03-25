@@ -7,7 +7,6 @@ from plone.restapi.serializer.controlpanels import ControlpanelSerializeToJson
 from zope.component import adapter
 from zope.interface import implementer
 
-import json
 import logging
 
 
