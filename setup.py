@@ -15,7 +15,7 @@ long_description = "\n\n".join(
 
 setup(
     name="collective.volto.gdprcookie",
-    version="1.0.1",
+    version="1.0.2.dev0",
     description="Add-on for Plone to manage cookie settings for GDPR in Volto",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
