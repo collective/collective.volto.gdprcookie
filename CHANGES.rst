@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.1 (unreleased)
+1.0.1 (2024-03-25)
 ------------------
 
 - Fix serializer/deserializer to use block transformers.
