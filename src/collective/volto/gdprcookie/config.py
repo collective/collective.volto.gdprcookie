@@ -9,7 +9,7 @@ DEFAULT_SETTINGS = {
                     "type": "p",
                     "children": [
                         {
-                            "text": "Questo sito utilizza i cookie tecnici di navigazione e di sessione per garantire un miglior servizio di navigazione del sito, e cookie analitici per raccogliere informazioni sull'uso del sito da parte degli utenti.  Utilizza anche cookie di profilazione dell'utente per fini statistici. Per i cookie di profilazione puoi decidere se abilitarli o meno cliccando sul pulsante 'Impostazioni'. Per saperne di più, su come disabilitare i cookie oppure abilitarne solo alcuni, consulta la nostra <a href='/privacy-policy'>Cookie Policy</a>.",
+                            "text": "Questo sito utilizza i cookie tecnici di navigazione e di sessione per garantire un miglior servizio di navigazione del sito, e cookie analitici per raccogliere informazioni sull'uso del sito da parte degli utenti.  Utilizza anche cookie di profilazione dell'utente per fini statistici. Per i cookie di profilazione puoi decidere se abilitarli o meno cliccando sul pulsante 'Impostazioni'. Per saperne di più, su come disabilitare i cookie oppure abilitarne solo alcuni, consulta la nostra Cookie Policy.",
                         }
                     ],
                 }
@@ -22,7 +22,7 @@ DEFAULT_SETTINGS = {
                     "type": "p",
                     "children": [
                         {
-                            "text": "This site uses technical navigation and session cookies to ensure a better site navigation service, and analytical cookies to collect information on the use of the site by users. It also uses user profiling cookies for statistical. For profiling cookies you can decide whether to enable them or not by clicking on the 'Settings' button. To find out more, on how to disable cookies or enable only some of them, consult our <a href='/en/privacy-policy'>Cookie Policy</a>.",
+                            "text": "This site uses technical navigation and session cookies to ensure a better site navigation service, and analytical cookies to collect information on the use of the site by users. It also uses user profiling cookies for statistical. For profiling cookies you can decide whether to enable them or not by clicking on the 'Settings' button. To find out more, on how to disable cookies or enable only some of them, consult our Cookie Policy.",
                         }
                     ],
                 }
@@ -35,7 +35,7 @@ DEFAULT_SETTINGS = {
                     "type": "p",
                     "children": [
                         {
-                            "text": "Este sitio utiliza cookies técnicas de navegación y sesión para garantizar un mejor servicio de navegación en el sitio, y cookies analíticas para recopilar información sobre el uso del sitio por parte de los usuarios. También utiliza cookies de perfil de usuario con fines estadísticos. Para las cookies de creación de perfiles, puede decidir habilitarlas o no haciendo clic en el botón \"Configuración\". Para obtener más información sobre cómo deshabilitar las cookies o habilitar solo ciertas cookies, consulte nuestra <a href='/es/privacy-policy'>Política de Cookies</a>.",
+                            "text": 'Este sitio utiliza cookies técnicas de navegación y sesión para garantizar un mejor servicio de navegación en el sitio, y cookies analíticas para recopilar información sobre el uso del sitio por parte de los usuarios. También utiliza cookies de perfil de usuario con fines estadísticos. Para las cookies de creación de perfiles, puede decidir habilitarlas o no haciendo clic en el botón "Configuración". Para obtener más información sobre cómo deshabilitar las cookies o habilitar solo ciertas cookies, consulte nuestra Política de Cookies.',
                         }
                     ],
                 }
@@ -48,7 +48,7 @@ DEFAULT_SETTINGS = {
                     "type": "p",
                     "children": [
                         {
-                            "text": "Ce site utilise des cookies techniques de navigation et de session pour assurer un meilleur service de navigation sur le site, et des cookies analytiques pour collecter des informations sur l'utilisation du site par les utilisateurs. Il utilise également des cookies de profilage des utilisateurs à des fins statistiques. Pour les cookies de profilage, vous pouvez décider de les activer ou non en cliquant sur le bouton « Paramètres ». Pour en savoir plus, sur la façon de désactiver les cookies ou d'en activer seulement certains, consultez notre <a href='/fr/privacy-policy'>Politique relative aux cookies</a>.",
+                            "text": "Ce site utilise des cookies techniques de navigation et de session pour assurer un meilleur service de navigation sur le site, et des cookies analytiques pour collecter des informations sur l'utilisation du site par les utilisateurs. Il utilise également des cookies de profilage des utilisateurs à des fins statistiques. Pour les cookies de profilage, vous pouvez décider de les activer ou non en cliquant sur le bouton « Paramètres ». Pour en savoir plus, sur la façon de désactiver les cookies ou d'en activer seulement certains, consultez notre Politique relative aux cookies.",
                         }
                     ],
                 }
