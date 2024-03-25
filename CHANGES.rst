@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.2 (unreleased)
+1.0.2 (2024-03-25)
 ------------------
 
 - Fix serializer code.
