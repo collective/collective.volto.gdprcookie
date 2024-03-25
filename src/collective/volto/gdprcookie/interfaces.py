@@ -1,5 +1,6 @@
 from collective.volto.gdprcookie import _
 from collective.volto.gdprcookie.config import DEFAULT_SETTINGS
+from plone.restapi.controlpanels import IControlpanel
 from zope.interface import Interface
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 from zope.schema import Bool
@@ -12,6 +13,10 @@ import json
 
 class ICollectiveVoltoGdprcookieLayer(IDefaultBrowserLayer):
     """Marker interface that defines a browser layer."""
+
+
+class IGDPRCookieSettingsControlpanel(IControlpanel):
+    """ """
 
 
 class IGDPRCookieSettings(Interface):

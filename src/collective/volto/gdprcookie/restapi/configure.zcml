@@ -10,6 +10,7 @@
   <!-- enable controlpanel on plone.restapi -->
   <adapter
       factory=".controlpanel.GDPRCookieSettingsControlpanel"
+      provides="collective.volto.gdprcookie.interfaces.IGDPRCookieSettingsControlpanel"
       name="gdpr-cookie-settings"
       />
 
