@@ -12,7 +12,7 @@ def parse_gdpr_blocks(context, data, transformer_interface):
     if isinstance(data, str):
         data = json.loads(data)
 
-    # fix intenal links
+    # fix internal links
     for text in data["text"].values():
         text = fix_text(
             context=context,
