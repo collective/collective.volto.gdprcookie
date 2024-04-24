@@ -5,7 +5,8 @@ Changelog
 1.0.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix deserializer and save all data in registry.
+  [cekk]
 
 
 1.0.2 (2024-03-25)

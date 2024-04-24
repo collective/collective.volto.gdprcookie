@@ -16,6 +16,8 @@ class GDPRCookieSettingsDeserializeFromJson(ControlpanelDeserializeFromJson):
         """
         Convert json data into a string
         """
+        super().__call__()
+
         req = json_body(self.controlpanel.request)
         proxy = self.registry.forInterface(self.schema, prefix=self.schema_prefix)
         errors = []
