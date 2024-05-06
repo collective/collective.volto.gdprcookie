@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.3 (unreleased)
+1.0.3 (2024-05-06)
 ------------------
 
 - Fix deserializer and save all data in registry.
