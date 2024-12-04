@@ -19,7 +19,7 @@ msgstr ""
 
 #: collective/volto/gdprcookie/profiles/default/controlpanel.xml
 msgid "GDPR Cookie Settings"
-msgstr "Impostazioni Cookie GDPR"
+msgstr "Banner cookie"
 
 #: collective/volto/gdprcookie/configure.zcml:30
 msgid "Installs the collective.volto.gdprcookie add-on."
