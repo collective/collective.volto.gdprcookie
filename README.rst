@@ -47,8 +47,8 @@ Screenshots
 
 .. figure:: https://raw.githubusercontent.com/collective/collective.volto.gdprcookie/refs/heads/main/docs/images/gdpr-cookie-settings.png
    :align: center
-   :height: 800px
-   :width: 463px
+   :height: 463px
+   :width: 800px
    :alt: GDPR Cookie Settings from Volto
 
    The GDPR Cookie Settings from Volto.
