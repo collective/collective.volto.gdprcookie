@@ -45,7 +45,7 @@ Features
 Screenshots
 -----------
 
-.. image:: ./docs/images/gdpr-cookie-settings.png
+.. image:: https://raw.githubusercontent.com/collective/collective.volto.gdprcookie/refs/heads/main/docs/images/gdpr-cookie-settings.png
    :height: 800 px
    :width: 463 px
    :scale: 50 %
@@ -59,7 +59,9 @@ Screenshots
 
 Anonymous users can't access registry resources by default with ``plone.restapi`` (there is a special permission).
 
-To avoid enabling registry access to everyone, this package exposes a dedicated RestApi route with GDPR cookie settings: *@gdpr-cookie-settings*::
+To avoid enabling registry access to everyone, this package exposes a dedicated RestApi route with ``GDPR`` cookie settings: *@gdpr-cookie-settings*:
+
+::
 
     > curl -i http://localhost:8080/Plone/@gdpr-cookie-settings -H 'Accept: application/json' --user admin:admin
 
