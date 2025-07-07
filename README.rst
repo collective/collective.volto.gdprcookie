@@ -45,12 +45,11 @@ Features
 Screenshots
 -----------
 
-.. image:: https://raw.githubusercontent.com/collective/collective.volto.gdprcookie/refs/heads/main/docs/images/gdpr-cookie-settings.png
-   :height: 800 px
-   :width: 463 px
-   :scale: 50 %
-   :alt: GDPR Cookie Settings from Volto
+.. figure:: https://raw.githubusercontent.com/collective/collective.volto.gdprcookie/refs/heads/main/docs/images/gdpr-cookie-settings.png
    :align: center
+   :height: 800px
+   :width: 463px
+   :alt: GDPR Cookie Settings from Volto
 
    The GDPR Cookie Settings from Volto.
 
