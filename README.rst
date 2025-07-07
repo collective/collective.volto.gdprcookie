@@ -42,6 +42,18 @@ Features
 - Control panel in Plone registry to manage ``GDPR`` cookie settings.
 - RestApi endpoint that exposes these settings for Volto.
 
+Screenshots
+-----------
+
+.. image:: ./docs/images/gdpr-cookie-settings.png
+   :height: 800 px
+   :width: 463 px
+   :scale: 50 %
+   :alt: GDPR Cookie Settings from Volto
+   :align: center
+
+   The GDPR Cookie Settings from Volto.
+
 @gdpr-cookie-settings
 ---------------------
 
