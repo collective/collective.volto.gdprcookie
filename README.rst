@@ -34,20 +34,20 @@
 Volto GDPR Cookie
 =================
 
-Add-on for manage GDPR Cookie banner on Volto based on GDPR law.
+Add-on for manage ``GDPR`` Cookie banner on Volto based on `GDPR law <https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32016R0679>`_.
 
 Features
 --------
 
-- Control panel in plone registry to manage GDPR cookie settings.
-- Restapi endpoint that exposes these settings for Volto.
+- Control panel in Plone registry to manage ``GDPR`` cookie settings.
+- RestApi endpoint that exposes these settings for Volto.
 
 @gdpr-cookie-settings
 ---------------------
 
-Anonymous users can't access registry resources by default with plone.restapi (there is a special permission).
+Anonymous users can't access registry resources by default with ``plone.restapi`` (there is a special permission).
 
-To avoid enabling registry access to everyone, this package exposes a dedicated restapi route with GDPR cookie settings: *@gdpr-cookie-settings*::
+To avoid enabling registry access to everyone, this package exposes a dedicated RestApi route with GDPR cookie settings: *@gdpr-cookie-settings*::
 
     > curl -i http://localhost:8080/Plone/@gdpr-cookie-settings -H 'Accept: application/json' --user admin:admin
 
@@ -55,7 +55,7 @@ To avoid enabling registry access to everyone, this package exposes a dedicated 
 Volto integration
 -----------------
 
-To use this product in Volto, your Volto project needs to include a new plugin: https://github.com/collective/XXX
+To use this product in Volto, your Volto project needs to include a new plugin: https://github.com/collective/volto-gdpr-privacy
 
 
 Translations
@@ -64,13 +64,16 @@ Translations
 This product has been translated into
 
 - Italian
+- Spanish
 
 
 
 Installation
 ------------
 
-Install collective.volto.gdprcookie by adding it to your buildout::
+Install ``collective.volto.gdprcookie`` by adding it to your buildout:
+
+::
 
     [buildout]
 
